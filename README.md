@@ -1,33 +1,11 @@
-# 🎂 Happy Birthday Mini Website 🎉  
+## Valentine Day Proposal Website 💌💘
 
-A beautiful, interactive mini website I built to celebrate my girlfriend’s special day ❤️.  
-This project is made with **HTML, CSS, and JavaScript** and includes animations, surprises, and heartfelt wishes.  
+Open source so you can edit it and change it however you'd want! 
 
-✨ Anyone can use this project to create a unique online birthday greeting for their loved one!  
+Two buttons to pick from for the choice:
 
----
+- **Yes ofc** - Redirects you to index2.html and gives you a prompt   
+- **No lol** - You enter full screen as soon as you click no and the button runs away from you.
 
-## 🚀 Live Demo  
-👉 [Click here to view the site](https://nikitayadav19.github.io/HappyBirthdayGF)  
+<img width="1908" height="880" alt="image" src="https://github.com/user-attachments/assets/483e7111-1cd2-41f4-be60-52dc94a9fc4d" />
 
----
-
-
-## 🎁 Features   
-- 💌 Heartfelt birthday message with typewriter effect  
-- 🌟 Responsive design (works on phone & desktop)  
-- ✨ Easy to customize for anyone  
-
----
-
-## 🛠️ Tech Stack  
-- **HTML5**  
-- **CSS3** (with animations)  
-- **JavaScript**  
-
----
-
-## 🎉 How to Use  
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/nikitayadav19/HappyBirthdayGF.git

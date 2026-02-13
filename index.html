@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title> 💌 </title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="container">
-        <h1>Happy Birthday Priya💗</h1>
-        <div class="greeting"></div>
-        <button class="cta-button">Click to Enter Our World 💕</button>
-    </div>
 
-    <script src="script.js">
+<div class="container">
+    <img src="default-ask.gif" class="heart" alt="Valentine Heart">
+</div>
+    <div class="text">
+        <h1>Hiii Mintyy, will you be my Valentine please 🥰?</h1>
+        <button class="button"  id="yesBtn">Yeeee Minty will be Guin's Valentine</button>
+        <button class="button" id="noBtn">Nu!</button>
         
+    </div>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="evangeline - pastel ghost · iris.mp3" type="audio/mpeg">
+    </audio>
+    <script src="val.js"></script>
+    <script>
+const confettiColors = ['#e0a3d6', '#2a1a4d', '#ffbdf9', '#bdfcff', '#fff', '#ff6bcb'];
+                function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart-fall';
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+            heart.style.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 350);
     </script>
+</body>
+<div class="background"></div>
+
 </body>
 </html>

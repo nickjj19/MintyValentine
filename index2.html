@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guin loves u</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Load GSAP (required!) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <img src="nyqnxeb6y4.gif" class="heart" alt="Valentine Heart">
+
+    <div class="text">
+      <h1>Yipppee Guin is very happyyy</h1>
+      <h1>Guin loves Minty the most ❤️</h1>
+      <button class="cta-button">Click to Enter Our World 💕</button>
+    </div>
+  </div>
+
+  <!-- Put script BEFORE closing body -->
+  <script>
+    const confettiColors = ['#e0a3d6', '#2a1a4d', '#ffbdf9', '#bdfcff', '#fff', '#ff6bcb'];
+    const chocolateEmojis = ['🍫', '🍪'];
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.className = 'heart-fall';
+      confetti.innerHTML = Math.random() < 0.7 ? '❤' : chocolateEmojis[Math.floor(Math.random() * chocolateEmojis.length)];
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+      confetti.style.color = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+      confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 4000);
+    }
+    setInterval(createConfetti, 250);
+
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('mouseenter', () => gsap.to(button, { scale: 1.1, duration: 0.3 }));
+      button.addEventListener('mouseleave', () => gsap.to(button, { scale: 1, duration: 0.3 }));
+
+      button.addEventListener('click', () => {
+        gsap.to('body', {
+          opacity: 0,
+          duration: 1,
+          onComplete: () => (window.location.href = 'cause.html')
+        });
+      });
+    });
+  </script>
+</body>
+</html>
